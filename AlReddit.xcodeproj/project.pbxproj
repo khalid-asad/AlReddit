@@ -17,6 +17,14 @@
 		30175A9222232E550092D18A /* AlRedditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175A9122232E550092D18A /* AlRedditUITests.swift */; };
 		30175AA5222331650092D18A /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AA4222331650092D18A /* PostsModel.swift */; };
 		30175AA72223334F0092D18A /* PostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30175AA62223334F0092D18A /* PostsView.xib */; };
+		30175AA9222336C20092D18A /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AA8222336C20092D18A /* PostsView.swift */; };
+		30175AAC222340AA0092D18A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AAB222340AA0092D18A /* UIView+Extensions.swift */; };
+		30175AAF2223444B0092D18A /* UIConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AAE2223444B0092D18A /* UIConfigurable.swift */; };
+		30175AB122234C400092D18A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB022234C400092D18A /* UIFont+Extensions.swift */; };
+		30175AB322234CC10092D18A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB222234CC10092D18A /* UIColor+Extensions.swift */; };
+		30175AB6222361910092D18A /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB5222361910092D18A /* UIStackView+Extensions.swift */; };
+		30175AB92223764A0092D18A /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB82223764A0092D18A /* UIEdgeInsets+Extensions.swift */; };
+		30175ABB22237F840092D18A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175ABA22237F840092D18A /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		30175A9322232E550092D18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30175AA4222331650092D18A /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
 		30175AA62223334F0092D18A /* PostsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsView.xib; sourceTree = "<group>"; };
+		30175AA8222336C20092D18A /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		30175AAB222340AA0092D18A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		30175AAE2223444B0092D18A /* UIConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigurable.swift; sourceTree = "<group>"; };
+		30175AB022234C400092D18A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		30175AB222234CC10092D18A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		30175AB5222361910092D18A /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		30175AB82223764A0092D18A /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		30175ABA22237F840092D18A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +150,8 @@
 		30175A9F222331130092D18A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				30175AAD222343FA0092D18A /* Protocols */,
+				30175AAA2223409D0092D18A /* Extensions */,
 				30175AA0222331280092D18A /* Posts */,
 				30175A7322232E540092D18A /* SecondViewController.swift */,
 			);
@@ -170,8 +188,30 @@
 			isa = PBXGroup;
 			children = (
 				30175AA62223334F0092D18A /* PostsView.xib */,
+				30175AA8222336C20092D18A /* PostsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		30175AAA2223409D0092D18A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30175AAB222340AA0092D18A /* UIView+Extensions.swift */,
+				30175AB022234C400092D18A /* UIFont+Extensions.swift */,
+				30175AB222234CC10092D18A /* UIColor+Extensions.swift */,
+				30175AB5222361910092D18A /* UIStackView+Extensions.swift */,
+				30175AB82223764A0092D18A /* UIEdgeInsets+Extensions.swift */,
+				30175ABA22237F840092D18A /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30175AAD222343FA0092D18A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30175AAE2223444B0092D18A /* UIConfigurable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +346,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30175AAF2223444B0092D18A /* UIConfigurable.swift in Sources */,
+				30175AAC222340AA0092D18A /* UIView+Extensions.swift in Sources */,
+				30175AB122234C400092D18A /* UIFont+Extensions.swift in Sources */,
 				30175A7422232E540092D18A /* SecondViewController.swift in Sources */,
 				30175AA5222331650092D18A /* PostsModel.swift in Sources */,
 				30175A7022232E540092D18A /* AppDelegate.swift in Sources */,
+				30175ABB22237F840092D18A /* UIImageView+Extensions.swift in Sources */,
+				30175AA9222336C20092D18A /* PostsView.swift in Sources */,
+				30175AB92223764A0092D18A /* UIEdgeInsets+Extensions.swift in Sources */,
+				30175AB6222361910092D18A /* UIStackView+Extensions.swift in Sources */,
+				30175AB322234CC10092D18A /* UIColor+Extensions.swift in Sources */,
 				30175A7222232E540092D18A /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
