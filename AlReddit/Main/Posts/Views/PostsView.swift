@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+typealias PostInformation = (title: String?, postImage: UIImage?, upvoteText: String?, downvoteText: String?, commentsText: String?, timeText: String?, subredditText: String?, goldText: String?, silverText: String?, bronzeText: String?)
+
 final class PostsView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -31,6 +33,8 @@ final class PostsView: UIView {
     @IBOutlet weak var silverLabel: UILabel!
     @IBOutlet weak var bronzeImageView: UIImageView!
     @IBOutlet weak var bronzeLabel: UILabel!
+    @IBOutlet weak var postImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var postImageWidth: NSLayoutConstraint!
     
     private var isExpanded: Bool = false
     
@@ -42,9 +46,7 @@ final class PostsView: UIView {
     private var commentsImage = UIImage(named: "message-square")
     private var timeImage = UIImage(named: "clock")
     private var moreImage = UIImage(named: "more-horizontal")
-    private var goldImage = UIImage(named: "award")
-    private var silverImage = UIImage(named: "award")
-    private var bronzeImage = UIImage(named: "award")
+    private var awardImage = UIImage(named: "award")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,18 +58,18 @@ final class PostsView: UIView {
             $0?.textColor = UIColor.black
         }
         
-        addBorder(color: .black, width: 1)
-        setRoundedCorners(radius: 1)
+        addBorder(color: .black, width: 3)
+        setRoundedCorners(radius: 12)
     }
 }
 
 // MARK: - Internal Methods
 extension PostsView {
     
-    static func create(title: String?, postImage: UIImage?, upvoteText: String?, downvoteText: String?, commentsText: String?, timeText: String?, subredditText: String?, goldText: String?, silverText: String?, bronzeText: String?) -> PostsView {
+    static func create(postInformation: PostInformation) -> PostsView {
         let view: PostsView = .fromNib()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.configure(title: title, postImage: postImage, upvoteText: upvoteText, downvoteText: downvoteText, commentsText: commentsText, timeText: timeText, subredditText: subredditText, goldText: goldText, silverText: silverText, bronzeText: bronzeText)
+        view.configure(postInformation: postInformation)
         return view
     }
 }
@@ -75,23 +77,23 @@ extension PostsView {
 // MARK: - Private Methods
 extension PostsView {
     
-    private func configure(title: String?, postImage: UIImage?, upvoteText: String?, downvoteText: String?, commentsText: String?, timeText: String?, subredditText: String?, goldText: String?, silverText: String?, bronzeText: String?) {
-        titleLabel.configure(text: title)
-        postImageView.configure(image: postImage)
+    private func configure(postInformation: PostInformation) {
+        titleLabel.configure(text: postInformation.title)
+        postImageView.setAutoScaledImage(inputImage: postInformation.postImage, widthConstraint: postImageWidth, heightConstraint: postImageHeight)
         upvoteImageView.configure(image: upvoteImage)
-        upvoteLabel.configure(text: upvoteText)
+        upvoteLabel.configure(text: postInformation.upvoteText)
         downvoteImageView.configure(image: downvoteImage)
-        downvoteLabel.configure(text: downvoteText)
+        downvoteLabel.configure(text: postInformation.downvoteText)
         commentsImageView.configure(image: commentsImage)
-        commentsLabel.configure(text: commentsText)
+        commentsLabel.configure(text: postInformation.commentsText)
         timeImageView.configure(image: timeImage)
-        timeLabel.configure(text: timeText)
+        timeLabel.configure(text: postInformation.timeText)
         moreImageView.configure(image: moreImage)
-        subredditLabel.configure(text: subredditText)
+        subredditLabel.configure(text: postInformation.subredditText)
         
-        configureDonations(text: goldText, label: goldLabel, imageView: goldImageView, image: goldImage, color: .yellow)
-        configureDonations(text: silverText, label: silverLabel, imageView: silverImageView, image: silverImage, color: .black)
-        configureDonations(text: bronzeText, label: bronzeLabel, imageView: bronzeImageView, image: bronzeImage, color: .brown)
+        configureDonations(text: postInformation.goldText, label: goldLabel, imageView: goldImageView, image: awardImage, color: .yellow)
+        configureDonations(text: postInformation.silverText, label: silverLabel, imageView: silverImageView, image: awardImage, color: .black)
+        configureDonations(text: postInformation.bronzeText, label: bronzeLabel, imageView: bronzeImageView, image: awardImage, color: .brown)
     }
     
     private func configureDonations(text: String?, label: UILabel, imageView: UIImageView, image: UIImage?, color: UIColor) {

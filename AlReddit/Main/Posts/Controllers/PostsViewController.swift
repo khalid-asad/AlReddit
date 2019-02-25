@@ -43,7 +43,7 @@ extension PostsViewController {
     }
     
     private func addPosts() {
-        let postsView = PostsView.create(title: "title", postImage: UIImage(named: "hanny-naibaho"), upvoteText: "100", downvoteText: "200", commentsText: "3", timeText: "4h", subredditText: "r/niceguys", goldText: "1", silverText: "2", bronzeText: "3")
+        let postsView = PostsView.create(postInformation: PostInformation(title: "Who's the goodest boy?", postImage: UIImage(named: "hanny-naibaho"), upvoteText: "10330", downvoteText: "200", commentsText: "343", timeText: "4h", subredditText: "r/aww", goldText: "1", silverText: "2", bronzeText: "3"))
         stackView.addArrangedSubview(UIView.createView(withSubview: postsView, edgeInsets: .sides))
         
         postsView.didTapAction = {
