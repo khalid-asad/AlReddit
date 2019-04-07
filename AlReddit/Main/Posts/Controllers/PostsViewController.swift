@@ -21,7 +21,9 @@ final class PostsViewController: UIViewController {
         super.viewDidLoad()
         model = PostsModel()
         
-        configureStackView()
+        DispatchQueue.main.async {
+            self.configureStackView()
+        }
     }
 }
 
@@ -33,17 +35,20 @@ extension PostsViewController {
             $0.removeFromSuperview()
         }
         
-        guard let items = model.stackableItems else { return }
-        items.forEach {
-            switch $0 {
-            case .posts:
-                addPosts()
+        model.fetchPosts {
+            if !self.model.stackableItems.isEmpty {
+                self.model.stackableItems.forEach {
+                    switch $0 {
+                    case .posts(let postInformation):
+                        self.addPosts(postInformation: postInformation)
+                    }
+                }
             }
         }
     }
     
-    private func addPosts() {
-        let postsView = PostsView.create(postInformation: PostInformation(title: "Who's the goodest boy?", postImage: UIImage(named: "hanny-naibaho"), upvoteText: "10330", downvoteText: "200", commentsText: "343", timeText: "4h", subredditText: "r/aww", goldText: "1", silverText: "2", bronzeText: "3"))
+    private func addPosts(postInformation: PostInformation) {
+        let postsView = PostsView.create(postInformation: postInformation)
         stackView.addArrangedSubview(UIView.createView(withSubview: postsView, edgeInsets: .sides))
         
         postsView.didTapAction = {
