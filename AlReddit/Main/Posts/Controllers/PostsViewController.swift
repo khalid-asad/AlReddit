@@ -21,7 +21,9 @@ final class PostsViewController: UIViewController {
         super.viewDidLoad()
         model = PostsModel()
         
-        configureStackView()
+        DispatchQueue.main.async {
+            self.configureStackView()
+        }
     }
 }
 
@@ -33,16 +35,38 @@ extension PostsViewController {
             $0.removeFromSuperview()
         }
         
-        guard let items = model.stackableItems else { return }
-        items.forEach {
-            switch $0 {
-            case .posts:
-                addPosts()
+        model.fetchPosts {
+            if !self.model.stackableItems.isEmpty {
+                self.model.stackableItems.forEach {
+                    switch $0 {
+                    case .posts(let postInformation):
+                        self.addPosts(postInformation: postInformation)
+                    }
+                }
             }
         }
     }
     
-    private func addPosts() {
-        #warning("Add functionality for posts")
+    private func addPosts(postInformation: PostInformation) {
+        let postsView = PostsView.create(postInformation: postInformation)
+        stackView.addArrangedSubview(UIView.createView(withSubview: postsView, edgeInsets: .sides))
+        
+        postsView.didTapAction = {
+            #warning("Implement functionality to go to comments")
+        }
+        
+        postsView.didTapImage = { (newImageView) in
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissFullscreenImage))
+            newImageView.addGestureRecognizer(tap)
+            self.view.addSubview(newImageView)
+            self.navigationController?.isNavigationBarHidden = true
+            self.tabBarController?.tabBar.isHidden = true
+        }
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
 }

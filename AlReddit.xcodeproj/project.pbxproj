@@ -17,6 +17,18 @@
 		30175A9222232E550092D18A /* AlRedditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175A9122232E550092D18A /* AlRedditUITests.swift */; };
 		30175AA5222331650092D18A /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AA4222331650092D18A /* PostsModel.swift */; };
 		30175AA72223334F0092D18A /* PostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30175AA62223334F0092D18A /* PostsView.xib */; };
+		30175AA9222336C20092D18A /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AA8222336C20092D18A /* PostsView.swift */; };
+		30175AAC222340AA0092D18A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AAB222340AA0092D18A /* UIView+Extensions.swift */; };
+		30175AAF2223444B0092D18A /* UIConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AAE2223444B0092D18A /* UIConfigurable.swift */; };
+		30175AB122234C400092D18A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB022234C400092D18A /* UIFont+Extensions.swift */; };
+		30175AB322234CC10092D18A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB222234CC10092D18A /* UIColor+Extensions.swift */; };
+		30175AB6222361910092D18A /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB5222361910092D18A /* UIStackView+Extensions.swift */; };
+		30175AB92223764A0092D18A /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175AB82223764A0092D18A /* UIEdgeInsets+Extensions.swift */; };
+		30175ABB22237F840092D18A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30175ABA22237F840092D18A /* UIImageView+Extensions.swift */; };
+		302CE543225A7E1500B4FCE9 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302CE542225A7E1500B4FCE9 /* CommentsViewController.swift */; };
+		302CE549225A7F1700B4FCE9 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302CE548225A7F1700B4FCE9 /* CommentsView.swift */; };
+		302CE54B225A7F2100B4FCE9 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302CE54A225A7F2100B4FCE9 /* CommentsView.xib */; };
+		302CE54D225A7F2F00B4FCE9 /* CommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302CE54C225A7F2F00B4FCE9 /* CommentsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,18 @@
 		30175A9322232E550092D18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30175AA4222331650092D18A /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
 		30175AA62223334F0092D18A /* PostsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsView.xib; sourceTree = "<group>"; };
+		30175AA8222336C20092D18A /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		30175AAB222340AA0092D18A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		30175AAE2223444B0092D18A /* UIConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigurable.swift; sourceTree = "<group>"; };
+		30175AB022234C400092D18A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		30175AB222234CC10092D18A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		30175AB5222361910092D18A /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		30175AB82223764A0092D18A /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		30175ABA22237F840092D18A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		302CE542225A7E1500B4FCE9 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		302CE548225A7F1700B4FCE9 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		302CE54A225A7F2100B4FCE9 /* CommentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
+		302CE54C225A7F2F00B4FCE9 /* CommentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +127,7 @@
 		30175A6E22232E540092D18A /* AlReddit */ = {
 			isa = PBXGroup;
 			children = (
+				302CE54E225A936000B4FCE9 /* API Clients */,
 				30175A9F222331130092D18A /* Main */,
 				30175A6F22232E540092D18A /* AppDelegate.swift */,
 				30175A7522232E540092D18A /* Main.storyboard */,
@@ -134,7 +159,10 @@
 		30175A9F222331130092D18A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				30175AAD222343FA0092D18A /* Protocols */,
+				30175AAA2223409D0092D18A /* Extensions */,
 				30175AA0222331280092D18A /* Posts */,
+				302CE544225A7E5F00B4FCE9 /* Comments */,
 				30175A7322232E540092D18A /* SecondViewController.swift */,
 			);
 			path = Main;
@@ -170,8 +198,72 @@
 			isa = PBXGroup;
 			children = (
 				30175AA62223334F0092D18A /* PostsView.xib */,
+				30175AA8222336C20092D18A /* PostsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		30175AAA2223409D0092D18A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30175AAB222340AA0092D18A /* UIView+Extensions.swift */,
+				30175AB022234C400092D18A /* UIFont+Extensions.swift */,
+				30175AB222234CC10092D18A /* UIColor+Extensions.swift */,
+				30175AB5222361910092D18A /* UIStackView+Extensions.swift */,
+				30175AB82223764A0092D18A /* UIEdgeInsets+Extensions.swift */,
+				30175ABA22237F840092D18A /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30175AAD222343FA0092D18A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30175AAE2223444B0092D18A /* UIConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		302CE544225A7E5F00B4FCE9 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				302CE545225A7E7700B4FCE9 /* Models */,
+				302CE546225A7E7D00B4FCE9 /* Views */,
+				302CE547225A7E9500B4FCE9 /* Controllers */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		302CE545225A7E7700B4FCE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				302CE54C225A7F2F00B4FCE9 /* CommentsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		302CE546225A7E7D00B4FCE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				302CE548225A7F1700B4FCE9 /* CommentsView.swift */,
+				302CE54A225A7F2100B4FCE9 /* CommentsView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		302CE547225A7E9500B4FCE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				302CE542225A7E1500B4FCE9 /* CommentsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		302CE54E225A936000B4FCE9 /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Clients";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30175A7C22232E550092D18A /* LaunchScreen.storyboard in Resources */,
+				302CE54B225A7F2100B4FCE9 /* CommentsView.xib in Resources */,
 				30175A7922232E550092D18A /* Assets.xcassets in Resources */,
 				30175AA72223334F0092D18A /* PostsView.xib in Resources */,
 				30175A7722232E540092D18A /* Main.storyboard in Resources */,
@@ -306,9 +399,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30175AAF2223444B0092D18A /* UIConfigurable.swift in Sources */,
+				302CE543225A7E1500B4FCE9 /* CommentsViewController.swift in Sources */,
+				30175AAC222340AA0092D18A /* UIView+Extensions.swift in Sources */,
+				30175AB122234C400092D18A /* UIFont+Extensions.swift in Sources */,
+				302CE54D225A7F2F00B4FCE9 /* CommentsModel.swift in Sources */,
 				30175A7422232E540092D18A /* SecondViewController.swift in Sources */,
 				30175AA5222331650092D18A /* PostsModel.swift in Sources */,
+				302CE549225A7F1700B4FCE9 /* CommentsView.swift in Sources */,
 				30175A7022232E540092D18A /* AppDelegate.swift in Sources */,
+				30175ABB22237F840092D18A /* UIImageView+Extensions.swift in Sources */,
+				30175AA9222336C20092D18A /* PostsView.swift in Sources */,
+				30175AB92223764A0092D18A /* UIEdgeInsets+Extensions.swift in Sources */,
+				30175AB6222361910092D18A /* UIStackView+Extensions.swift in Sources */,
+				30175AB322234CC10092D18A /* UIColor+Extensions.swift in Sources */,
 				30175A7222232E540092D18A /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
